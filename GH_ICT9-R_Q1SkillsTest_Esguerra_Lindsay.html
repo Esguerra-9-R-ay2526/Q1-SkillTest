@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBMC Robotics Club Application</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: url('https://images.pexels.com/photos/8294549/pexels-photo-8294549.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Dark overlay to make form pop */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .form-container {
+      max-width: 450px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .form-container img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .form-container h2 {
+      color: #d2a679; /* light brown / mocha accent */
+      margin-bottom: 10px;
+    }
+
+    .form-container p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 5px;
+      font-style: italic;
+      color: #ffe6cc;
+      text-align: left;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 10px #d2a679;
+    }
+
+    .skills, .gender {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .skills input, .gender input {
+      margin-right: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #d2a679, #8b5e3c);
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #8b5e3c, #d2a679);
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #ddd;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <!-- OBMC Logo (replace with working direct link) -->
+    <img src="https://obmontessori.edu.ph/sites/default/files/2020-09/OBMC%20Logo%20%28website%29.png" alt="OBMC Logo">
+
+    <h2>OBMC Robotics Club Application</h2>
+    <p>Be part of the future of technology! Fill in your details below to apply.</p>
+
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="grade">Grade Level:</label>
+      <select id="grade" name="grade">
+        <option>Grade 7</option>
+        <option>Grade 8</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+      </select>
+
+      <div class="gender">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+
+      <div class="skills">
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" value="Coding"> Coding
+        <input type="checkbox" name="skills" value="Design"> Design
+        <input type="checkbox" name="skills" value="Electronics"> Electronics
+      </div>
+
+      <label for="reason">Why do you want to join?</label>
+      <textarea id="reason" name="reason" rows="3"></textarea>
+
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+
+    <div class="footer">
+      © 2025 OBMC Robotics Club | Designed with 💡 Integrity & Innovation
+    </div>
+  </div>
+
+</body>
+</html>
+
